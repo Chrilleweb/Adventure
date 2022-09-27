@@ -1,5 +1,6 @@
 public class Adventure {
-    private Room currentPlace = new Room("Testrum", "Et midlertidigt testrum");
+    private Room currentPlace;
+    private String food = "food";
 
 
     public Adventure() {
@@ -13,15 +14,15 @@ public class Adventure {
     }
 
     public void createRooms() {
-        Room room1 = new Room("Room1", "Your are now in room 1....");
-        Room room2 = new Room("Room2", "Your are now in room 2....");
-        Room room3 = new Room("Room3", "Your are now in room 3....");
-        Room room4 = new Room("Room4", "Your are now in room 4....");
-        Room room5 = new Room("Room5", "Your are now in room 5....");
-        Room room6 = new Room("Room6", "Your are now in room 6....");
-        Room room7 = new Room("Room7", "Your are now in room 7....");
-        Room room8 = new Room("Room8", "Your are now in room 8....");
-        Room room9 = new Room("Room9", "Your are now in room 8....");
+        Room room1 = new Room("Room1", "Your are now in room 1....", "nothing");
+        Room room2 = new Room("Room2", "Your are now in room 2....", "There is: \nFood\nDrink\nWeapon");
+        Room room3 = new Room("Room3", "Your are now in room 3....", "nothing");
+        Room room4 = new Room("Room4", "Your are now in room 4....", "nothing");
+        Room room5 = new Room("Room5", "Your are now in room 5....", "nothing");
+        Room room6 = new Room("Room6", "Your are now in room 6....", "nothing");
+        Room room7 = new Room("Room7", "Your are now in room 7....", "nothing");
+        Room room8 = new Room("Room8", "Your are now in room 8....", "nothing");
+        Room room9 = new Room("Room9", "Your are now in room 8....", "nothing");
 
         //GO EAST
         room1.setEast(room2);
@@ -68,7 +69,13 @@ public class Adventure {
         currentPlace = currentPlace.getWest();
     }
 
+    public String room2Inv(){
+        return food;
+    }
 
+    public void inventory(){
+        this.food = food;
+    }
 
 }
 

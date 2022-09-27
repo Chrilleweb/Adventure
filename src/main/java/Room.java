@@ -1,6 +1,7 @@
 public class Room {
     private String roomName;
     private String roomInfo;
+    private String roomInv;
     private Room east;
     private Room north;
     private Room west;
@@ -8,9 +9,10 @@ public class Room {
 
 
 
-    public Room(String roomName, String roomInfo){
+    public Room(String roomName, String roomInfo, String roomInv){
         this.roomName = roomName;
         this.roomInfo = roomInfo;
+        this.roomInv = roomInv;
 
     }
 
@@ -20,6 +22,9 @@ public class Room {
 
     public String getRoomInfo(){
         return roomInfo;
+    }
+    public String getRoomInv(){
+        return roomInv;
     }
 
     public String toString(){

@@ -12,60 +12,64 @@ public class Userinterface {
     }
 
     public void user(){
-        startMenu();
-        do {
-            System.out.println("You are now in " + adventure.getCurrentPlace().getRoomName() +   ". Where do you wanna go?");
-            userInput = scan.nextLine();
-            switch (userInput) {
-                case "go north", "north", "n" -> {
-                    System.out.println("Going north");
-                    adventure.goNorth();
-                    break;
-                }
 
-                case "go south", "south", "s" -> {
-                    System.out.println("Going south");
-                    adventure.goSouth();
-                    break;
-                }
+            while (userInput != "exit"){
+                System.out.println("You are in " + adventure.getCurrentPlace().getRoomName() + " Whats next?");
+                userInput = scan.nextLine();
 
-                case "go east", "east", "e" -> {
-                    System.out.println("Going east");
-                    adventure.goEast();
-                    break;
-                }
+                switch (userInput) {
+                    case "go north", "north", "n" -> {
+                        System.out.println("Going north");
+                        adventure.goNorth();
+                    }
 
-                case "go west", "west", "w" -> {
-                    System.out.println("Going west");
-                    adventure.goWest();
-                    break;
-                }
+                    case "go south", "south", "s" -> {
+                        System.out.println("Going south");
+                        adventure.goSouth();
+                        break;
+                    }
 
-                case "look", "l" -> {
-                    System.out.println("look around");
-                    System.out.println("You are in: " + adventure.getCurrentPlace().getRoomName() );
-                    System.out.println("It looks like " + adventure.getCurrentPlace().getRoomInfo());
-                    break;
-                }
+                    case "go east", "east", "e" -> {
+                        System.out.println("Going east");
+                        adventure.goEast();
+                        break;
+                    }
 
-                case "help", "h" -> {
-                    System.out.println("print info");
-                    break;
-                }
+                    case "go west", "west", "w" -> {
+                        System.out.println("Going west");
+                        adventure.goWest();
+                        break;
+                    }
 
-                case "exit", "afslut" -> {
-                    System.exit(0);
-                    break;
+                    case "look", "l" -> {
+                        System.out.println("look around");
+                        System.out.println("You are in: " + adventure.getCurrentPlace().getRoomName());
+                        System.out.println("It looks like " + adventure.getCurrentPlace().getRoomInv());
+                        break;
+                    }
+
+                    case "help", "h" -> {
+                        System.out.println("print info");
+                        break;
+                    }
+
+                    case "exit", "afslut" -> {
+                        System.exit(0);
+                        break;
+                    }
+
                 }
             }
-        } while(userInput != "exit");
 
 
 
+        }
 
-    }
+
 
     public void start(){
+        startMenu();
         user();
     }
 }
+
