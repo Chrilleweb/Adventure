@@ -17,39 +17,46 @@ public class Userinterface {
             System.out.println("You are now in " + adventure.getCurrentPlace().getRoomName() +   ". Where do you wanna go?");
             userInput = scan.nextLine();
             switch (userInput) {
-                case "go north":
+                case "go north", "north", "n" -> {
                     System.out.println("Going north");
                     adventure.goNorth();
                     break;
+                }
 
-                case "go south":
+                case "go south", "south", "s" -> {
                     System.out.println("Going south");
                     adventure.goSouth();
                     break;
+                }
 
-                case "go east":
+                case "go east", "east", "e" -> {
                     System.out.println("Going east");
                     adventure.goEast();
                     break;
+                }
 
-                case "go west":
+                case "go west", "west", "w" -> {
                     System.out.println("Going west");
                     adventure.goWest();
                     break;
+                }
 
-                case "look":
+                case "look", "l" -> {
                     System.out.println("look around");
                     System.out.println("You are in: " + adventure.getCurrentPlace().getRoomName() );
                     System.out.println("It looks like " + adventure.getCurrentPlace().getRoomInfo());
                     break;
+                }
 
-                case "help":
+                case "help", "h" -> {
                     System.out.println("print info");
                     break;
+                }
 
-                case "exit":
+                case "exit", "afslut" -> {
                     System.exit(0);
                     break;
+                }
             }
         } while(userInput != "exit");
 
