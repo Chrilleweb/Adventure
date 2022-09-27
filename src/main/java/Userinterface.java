@@ -6,9 +6,16 @@ public class Userinterface {
     String userInput;
     String currentPlace = adventure.getRoom1();
 
+    public void startMenu(){
+        System.out.println("Welcome to the adventure program!");
+        System.out.println("You can use the following commmands:");
+        System.out.println("go north\n" + "go south\n" + "go east\n" + "go west\n");
+    }
+
     public void user(){
+        startMenu();
         do {
-            System.out.println("You are now in " + currentPlace +   " Where do you wanna go?");
+            System.out.println("You are now in " + currentPlace +   ". Where do you wanna go?");
             userInput = scan.nextLine();
             switch (userInput) {
                 case "go north":
