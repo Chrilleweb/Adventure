@@ -53,28 +53,49 @@ public class Adventure {
         currentPlace = room1;
     }
 
-    public void goEast() {
-        currentPlace = currentPlace.getEast();
-    }
-
-    public void goNorth(){
-        currentPlace = currentPlace.getNorth();
-    }
-
-    public void goSouth(){
-        currentPlace = currentPlace.getSouth();
-    }
-
-    public void goWest(){
-        currentPlace = currentPlace.getWest();
-    }
-
     public String room2Inv(){
         return food;
     }
 
     public void inventory(){
         this.food = food;
+    }
+
+    public boolean goNorth() {
+        if (currentPlace.getNorth() != null) {
+            currentPlace = currentPlace.getNorth();
+            return true;
+        }
+        return false;
+
+
+    }
+
+    public boolean goEast() {
+        if (currentPlace.getEast() != null) {
+            currentPlace = currentPlace.getEast();
+            return true;
+        }
+        return false;
+
+    }
+
+    public boolean goSouth() {
+        if (currentPlace.getSouth() != null) {
+            currentPlace = currentPlace.getSouth();
+            return true;
+        }
+        return false;
+
+    }
+
+    public boolean goWest() {
+        if (currentPlace.getWest() != null) {
+            currentPlace = currentPlace.getWest();
+            return true;
+        }
+        return false;
+
     }
 
 }

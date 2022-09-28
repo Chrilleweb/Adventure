@@ -19,26 +19,35 @@ public class Userinterface {
 
                 switch (userInput) {
                     case "go north", "north", "n" -> {
-                        System.out.println("Going north");
-                        adventure.goNorth();
+                        if (adventure.goNorth()){
+                            System.out.println("Going north");
+                        } else {
+                            System.out.println("You can not go that way");
+                        }
                     }
 
                     case "go south", "south", "s" -> {
-                        System.out.println("Going south");
-                        adventure.goSouth();
-                        break;
+                        if (adventure.goSouth()){
+                            System.out.println("Going south");
+                        } else {
+                            System.out.println("You can not go that way");
+                        }
                     }
 
                     case "go east", "east", "e" -> {
-                        System.out.println("Going east");
-                        adventure.goEast();
-                        break;
+                        if (adventure.goEast()){
+                            System.out.println("Going east");
+                        } else {
+                            System.out.println("You can not go that way");
+                        }
                     }
 
                     case "go west", "west", "w" -> {
-                        System.out.println("Going west");
-                        adventure.goWest();
-                        break;
+                        if (adventure.goWest()){
+                            System.out.println("Going west");
+                        } else {
+                            System.out.println("You can not go that way");
+                        }
                     }
 
                     case "look", "l" -> {
