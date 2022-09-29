@@ -71,6 +71,7 @@ public class Userinterface {
         startMenu();
         user();
         System.out.println("slut");
+        System.out.println("d");
     }
 }
 
