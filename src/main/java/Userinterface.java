@@ -79,6 +79,7 @@ public class Userinterface {
     public void start(){
         startMenu();
         user();
+        System.out.println("slut");
     }
 }
 
